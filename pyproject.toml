@@ -3,8 +3,9 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "aiortc"
-description = "An implementation of WebRTC and ORTC"
+name = "aiortc-fermax"
+version = "1.15.0.post1"
+description = "aiortc 1.15.0 accepting PyAV 19, a stopgap for fermax-blue-hass until aiortc 1.16.0"
 readme = "README.rst"
 requires-python = ">=3.10"
 license = "BSD-3-Clause"
@@ -26,14 +27,13 @@ classifiers = [
 ]
 dependencies = [
     "aioice>=0.10.2,<1.0.0",
-    "av>=14.0.0,<18.0.0",
+    "av>=14.0.0,<20.0.0",
     "cryptography>=44.0.0",
     "google-crc32c>=1.1",
     "pyee>=13.0.0",
     "pylibsrtp>=0.10.0",
     "pyopenssl>=25.0.0",
 ]
-dynamic = ["version"]
 
 [project.optional-dependencies]
 dev = [
@@ -72,9 +72,6 @@ select = [
 
 [tool.ruff.lint.isort]
 known-third-party = ["aiortc"]
-
-[tool.setuptools.dynamic]
-version = {attr = "aiortc.__version__"}
 
 [tool.setuptools.packages.find]
 where = ["src"]

@@ -1,3 +1,11 @@
+.. note::
+
+   ``aiortc-fermax`` is aiortc 1.15.0 with one change: it accepts PyAV 19
+   (``av>=14.0.0,<20.0.0``, as in aiortc/aiortc#1447), which Home Assistant
+   2026.10 ships. It exists only so `fermax-blue-hass
+   <https://github.com/bvis/fermax-blue-hass>`_ can install. Use the official
+   ``aiortc`` once 1.16.0 is out; this package will not get other updates.
+
 .. image:: docs/_static/aiortc.svg
    :width: 120px
    :alt: aiortc
